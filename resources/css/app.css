@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --color-cyber-dark: #070b12;
+    --color-cyber-card: #0c121e;
+    --color-cyber-border: #1e293b;
+    --color-cyber-blue: #0ea5e9;
+    --color-cyber-cyan: #06b6d4;
+    --color-cyber-green: #10b981;
+    --color-cyber-neon: #00ff9d;
+    --color-cyber-red: #f43f5e;
+}
+
+/* CyberShield Custom Visual Styling */
+body {
+    background-color: #050811;
+    color: #e2e8f0;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+}
+
+.cyber-grid {
+    background-size: 40px 40px;
+    background-image: 
+        linear-gradient(to right, rgba(14, 165, 233, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(14, 165, 233, 0.04) 1px, transparent 1px);
+}
+
+.cyber-radial {
+    background: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.15), transparent 70%);
+}
+
+.glow-border {
+    position: relative;
+    border: 1px solid rgba(14, 165, 233, 0.25);
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.08);
+}
+
+.glow-border:hover {
+    border-color: rgba(6, 182, 212, 0.5);
+    box-shadow: 0 0 25px rgba(6, 182, 212, 0.18);
+}
+
+.glow-green {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+}
+
+.glow-blue {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.25);
+}
+
+.glow-red {
+    box-shadow: 0 0 20px rgba(244, 63, 94, 0.25);
+}
+
+/* Custom Cyber Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #070b12;
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0ea5e9;
+}
